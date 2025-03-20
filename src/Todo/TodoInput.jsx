@@ -25,6 +25,8 @@ const [taskDescription,setTaskDescription] =useState("")
         complete:false
     }
     addNewTask(newTask)
+    setTaskTitle("")
+    setTaskDescription("")
  }
 
  
