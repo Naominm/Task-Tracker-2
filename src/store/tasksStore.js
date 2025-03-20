@@ -1,5 +1,6 @@
 
 import {create} from 'zustand'
+import{devtools,persist}from 'zustand/middleware'
 
 function taskStore(set){
 return{
@@ -42,5 +43,5 @@ deleteTask:function(taskId){
 }
 }
 
-const useTaskStore= create(taskStore)
+const useTaskStore= create(devtools(persist(taskStore,{name:"Task-tracker-app"})))
 export default useTaskStore;
