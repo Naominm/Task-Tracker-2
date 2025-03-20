@@ -16,8 +16,20 @@
     font-weight: 800;
     color: var(--color-white);
 }
+@media screen and (max-width: 40em) {
+    .hero-section-container h1{
+        font-size: 2.5rem;
+    }
+}
+
 .hero-section-container h3{
     font-size: 2rem;
     font-weight: 700;
     color: var(--color-white);
+}
+@media screen and (max-width: 40em) {
+    .hero-section-container h3{
+        font-size: 1.5rem;
+        padding-top: 1rem;
+    }
 }
