@@ -5,4 +5,19 @@
     align-items: center;
    justify-content: center;
    font-family: var(--primary-font);
+   background-image: 
+   linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,.4)),
+   url(../assets/tower.jpg);
+   background-position: center;
+   padding-block: 3rem;
+}
+.hero-section-container h1{
+    font-size: 3.8rem;
+    font-weight: 800;
+    color: var(--color-white);
+}
+.hero-section-container h3{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-white);
 }

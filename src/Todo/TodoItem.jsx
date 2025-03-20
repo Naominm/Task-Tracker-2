@@ -1,4 +1,8 @@
+
+
 import useTaskStore from "../store/tasksStore";
+import "./todo.css";
+
 function TodoItem({title, description,complete,id}) {
   const markAsCompleted=  useTaskStore(function(state){
         return state.markComplete

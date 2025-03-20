@@ -7,7 +7,7 @@ function TodoItems() {
         return state.tasks
     })
     return ( 
-        <section className="todo-items-section">
+        <section className="todo-items-section-c">
 {
     tasks.map((task)=><TodoItem title={task.title} description={task.description} complete={task.complete } key={task.id} id={task.id} />)
 }

@@ -35,31 +35,50 @@
 .submit-button:hover{
     background-color:var(--color-light-pink);
 }
-.todo-items-section{
+.todo-items-section-c{
+    display: flex;
+    flex-wrap: wrap !important;
+    justify-content: center;
     background-color: var(--color-light-pink);
     color: black;
-    margin-top: 2rem;
+    padding-top: 3rem;
     min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 3rem;
+    gap: 2rem;
+
    
 }
 .todo-item-container{
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
     background-color: var(--color-white);
     box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
     width: 25%;
-    min-height: 20rem;
+    min-height: 15rem;
     padding: 2rem;
     gap: 1rem;
    border-radius: 0.5rem;
+   transition: all .2s;
+
 }
+@media screen and (max-width: 55em) {
+    .todo-item-container{
+        width: 40%;
+    }
+}
+@media screen and (max-width: 40em) {
+    .todo-item-container{
+        width: 80%;
+    }
+}
+
+
+
+.todo-item-container:hover{
+    transform: translateY(-2rem);
+}
+
 /* .title{
 text-align: center;
 } */
@@ -82,7 +101,8 @@ text-align: center;
 }
 
 .todo-input-controls button{
-    padding: 1rem;
+    font-family: inherit;
+    padding: 0.9rem;
     border-radius: 0.5rem;
     border: none;
 
