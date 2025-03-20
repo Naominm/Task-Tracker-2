@@ -7,8 +7,8 @@
    font-family: var(--primary-font);
    background-image: 
    linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,.4)),
-   url(../assets/tower.jpg);
-   background-position: center;
+   url(../assets/t2.png);
+   background-position: left;
    padding-block: 3rem;
 }
 .hero-section-container h1{

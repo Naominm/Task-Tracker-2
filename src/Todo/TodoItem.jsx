@@ -31,8 +31,8 @@ function TodoItem({title, description,complete,id}) {
             </div>
             
             <div className="todo-input-controls">
-                <button  onClick={complete? handleMarkIncomplete:handleMarkComplete}>{complete? "Mark as incomplete":"Mark as complete"} </button>
-                <button onClick={handleDeleteTask}>Delete </button>
+                <button className="control-input" onClick={complete? handleMarkIncomplete:handleMarkComplete}>{complete? "Mark as incomplete":"Mark as complete"} </button>
+                <button className="control-delete" onClick={handleDeleteTask}>Delete </button>
             </div>
         </div>
      );

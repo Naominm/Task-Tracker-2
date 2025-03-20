@@ -47,10 +47,10 @@
 .submit-button{
     padding: 1rem;
     width: 35%;
-    color: var(--color-dark-pink);
-    border: 1px solid var(--color-dark-pink);
-    background-color: var(--color-white);
+    color: var(--color-white);
+    background-color: var(--color-dark-pink);
     border-radius : 1rem;
+    border: none;
 }
 @media screen and (max-width: 55em) {
     .submit-button{
@@ -63,15 +63,16 @@
     }
 }
 .submit-button:hover{
-    background-color:var(--color-light-pink);
+    background-color:var(--color-baby-pink);
+    font-weight: 700;
 }
 .todo-items-section-c{
     display: flex;
     flex-wrap: wrap !important;
     justify-content: center;
-    background-color: var(--color-light-pink);
+    background-color: var(--color-white);
     color: black;
-    padding-top: 3rem;
+    padding-block: 3rem;
     min-height: 50vh;
     gap: 2rem;
 
@@ -110,7 +111,7 @@ background-color: var(--color-light-pink);
 
 
 .todo-item-container:hover{
-    transform: translateY(-2rem);
+    transform: translateY(-1rem);
 }
 
 /* .title{
@@ -129,18 +130,30 @@ text-align: center;
 }
 .todo-input-controls{
     display: flex;
-    justify-content: baseline;
-    gap: 3rem;
+    gap: 2rem;
     margin-top: 4rem;
+    margin-inline:4rem;
+}
+.control-input{
+    background-color: var(--color-baby-pink);
+}
+.control-delete{
+    background-color: var(--color-dark-pink);
 }
 
 .todo-input-controls button{
     font-family: inherit;
-    padding: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8rem;
     border-radius: 0.5rem;
     border: none;
+    width: 11rem;
+
+  
 
 }
+
 .complete{
     text-decoration: line-through;
 }

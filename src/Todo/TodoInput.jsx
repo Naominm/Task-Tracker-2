@@ -1,21 +1,27 @@
 import{useState} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 import useTaskStore from "../store/tasksStore";
 import "./todo.css"
 function TodoInput() {
 const [taskTitle,setTaskTitle] =useState("")
 const [taskDescription,setTaskDescription] =useState("")
 
+
  const addNewTask=useTaskStore(function(state){
     return state.addTask
 })
+const notifyTitle = () => toast("Please provide a task title!");
+  const notifyDescription = () => toast("Please provide a task description!");
+
  function handleAddTask(e){
     e.preventDefault();
     if(!taskTitle){
-        alert("please supply a task title")
+       notifyTitle()
+    
         return
     }
     if(!taskDescription){
-        alert("please supply a task description")
+    notifyDescription()
         return;
     }
     const newTask={
@@ -45,8 +51,9 @@ const [taskDescription,setTaskDescription] =useState("")
             onChange={(e)=>setTaskDescription(e.target.value)}
             ></textarea>
             <button className="submit-button" onClick={handleAddTask}> Add Todo</button>
-
+   <ToastContainer />
         </form>
+        
      );
 }
 
