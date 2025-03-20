@@ -32,13 +32,36 @@ set(function(previousState){
     return{tasks:updatedTask}
 })
 },
+editTask: function(taskId, updatedData) {
+    set(function(previousState) {
+        const updatedTasks = previousState.tasks.map(function(task) {
+        if (task.id === taskId) {
+return { ...task, ...updatedData };
+    }
+return task;
+});
+return { tasks: updatedTasks };
+    });
+},
+
 deleteTask:function(taskId){
     set(function(previousState){
-      const remainingTask=  previousState.tasks.filter(function(task){
+ const remainingTask=  previousState.tasks.filter(function(task){
             return task.id!==taskId
         })
         return {tasks:remainingTask}
     })
+},
+addToFavorites:function(taskId){
+set(function(previousState){
+const UpdatedTask=  previousState.tasks.map(function(task){
+    if(task.id==taskId){
+        task.favourite = !task.favourite; 
+        return task;
+    }
+  })
+  return {tasks:UpdatedTask}
+})
 }
 }
 }
