@@ -30,6 +30,14 @@ set(function(previousState){
     })
     return{tasks:updatedTask}
 })
+},
+deleteTask:function(taskId){
+    set(function(previousState){
+      const remainingTask=  previousState.tasks.filter(function(task){
+            return task.id!==taskId
+        })
+        return {tasks:remainingTask}
+    })
 }
 }
 }

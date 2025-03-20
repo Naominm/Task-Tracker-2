@@ -6,11 +6,18 @@ function TodoItem({title, description,complete,id}) {
    const markAsIncomplete= useTaskStore(function(state){
         return state.markIncomplete
     })
+    const deleteTask= useTaskStore(function(state){
+        return state.deleteTask
+     })
+     
     function handleMarkIncomplete(){
         markAsIncomplete(id)
     }
     function handleMarkComplete(){
         markAsCompleted(id)
+    }
+    function handleDeleteTask(){
+        deleteTask(id)
     }
     return ( 
         <div className="todo-item-container">
@@ -21,7 +28,7 @@ function TodoItem({title, description,complete,id}) {
             
             <div className="todo-input-controls">
                 <button  onClick={complete? handleMarkIncomplete:handleMarkComplete}>{complete? "Mark as incomplete":"Mark as complete"} </button>
-                <button>Delete </button>
+                <button onClick={handleDeleteTask}>Delete </button>
             </div>
         </div>
      );
