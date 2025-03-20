@@ -87,3 +87,6 @@ text-align: center;
     border: none;
 
 }
+.complete{
+    text-decoration: line-through;
+}
