@@ -11,7 +11,7 @@ function Hero() {
     return ( 
     <section className="hero-section-container">
  <h1> Good {now()} Naomi</h1>
- <h3>You have {numberOfInCompleteTasks} tasks left</h3>
+ <h3>You have {numberOfInCompleteTasks} tasks left for today</h3>
  <TodoInput/>
     </section> );
 }
