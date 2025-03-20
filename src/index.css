@@ -1,0 +1,24 @@
+:root {
+  --color-light-gray: #F8F9FA;
+  --color-dark-pink: #BE5985;
+  --color-pink: #EC7FA9;
+  --color-baby-pink: #FFB8E0;
+  --color-light-pink:#FFEDFA;
+  --color-white: #ffff;
+  --primary-font: "Nunito", sans-serif;
+  --secondary-font: "Roboto", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--primary-font);
+}
